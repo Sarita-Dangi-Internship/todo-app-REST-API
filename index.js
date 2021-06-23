@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const express = require("express");
+var cors = require("cors");
+
 const app = express();
+app.use(cors());
 const apiRoutes = require("./api/routes/todo");
 
 app.use(express.urlencoded({ extented: true }));
